@@ -27,6 +27,7 @@ pipeline {
             steps {
                 sh script: '''
                     echo 'Building the docker image with Dockerfile'
+                    docker build -t "marsrover" -f .infra/docker/Dockerfile .
                 '''
             }
         }

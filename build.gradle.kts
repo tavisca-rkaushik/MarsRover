@@ -3,7 +3,6 @@ plugins {
 }
 
 group = "com.tavisca.workshop"
-version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -45,5 +44,11 @@ tasks.named<Test>("hidden-tests") {
     testLogging {
         showExceptions = true
         events("passed", "skipped", "failed")
+    }
+}
+
+val jar by tasks.getting(Jar::class) {
+    manifest {
+        attributes["Main-Class"] = "com.tavisca.workshop.Main"
     }
 }
