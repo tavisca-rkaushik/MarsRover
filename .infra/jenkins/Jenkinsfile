@@ -1,0 +1,40 @@
+pipeline {
+    agent any
+    stages {
+        stage('Building The Project') {
+            steps {
+               sh script: '''
+                chmod 777 ./gradlew
+                ./gradlew build
+                ''',
+                label: "Building Project"
+            }
+        }
+        stage('Running the Tests') {
+            steps {
+                sh script: '''
+                    ./gradlew test
+                ''',
+                label: "Building Project"
+            }
+        }
+        stage('Static Code Analysis') {
+            steps {
+                echo 'Using sonarQube to do static code analysis'
+            }
+        }
+        stage('Deploying') {
+            steps {
+                sh script: '''
+                    echo 'Building the docker image with Dockerfile'
+                    docker build -t "marsrover" -f .infra/docker/Dockerfile .
+                '''
+            }
+        }
+        stage('Publishing to Dockerhub') {
+            steps {
+                echo "Pushing the image to docker hub"
+            }
+        }
+    }
+}

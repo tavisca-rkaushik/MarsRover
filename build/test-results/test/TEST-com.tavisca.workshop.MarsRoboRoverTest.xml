@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tavisca.workshop.MarsRoboRoverTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2019-08-27T05:03:10" hostname="RENTLAPT0044" time="0.085">
+  <properties/>
+  <testcase name="canGoLeftAndRight()" classname="com.tavisca.workshop.MarsRoboRoverTest" time="0.048"/>
+  <testcase name="canGoRight()" classname="com.tavisca.workshop.MarsRoboRoverTest" time="0.003"/>
+  <testcase name="canGoLeft()" classname="com.tavisca.workshop.MarsRoboRoverTest" time="0.003"/>
+  <testcase name="canGoLeftOrRightOrMove()" classname="com.tavisca.workshop.MarsRoboRoverTest" time="0.004"/>
+  <testcase name="throwsExceptionWhenFormatIsNotAcceptable()" classname="com.tavisca.workshop.MarsRoboRoverTest" time="0.004"/>
+  <testcase name="hasInitialPosition()" classname="com.tavisca.workshop.MarsRoboRoverTest" time="0.004"/>
+  <testcase name="canMove()" classname="com.tavisca.workshop.MarsRoboRoverTest" time="0.007"/>
+  <testcase name="canResetCurrentPositionWithStringParameter()" classname="com.tavisca.workshop.MarsRoboRoverTest" time="0.001"/>
+  <testcase name="canResetCurrentPositionWithPositionParameter()" classname="com.tavisca.workshop.MarsRoboRoverTest" time="0.002"/>
+  <system-out><![CDATA[currentPosition...3 3 N
+commands...LR
+newPosition...3 3 N
+currentPosition...3 3 N
+commands...R
+newPosition...3 3 E
+currentPosition...3 3 N
+commands...L
+newPosition...3 3 W
+currentPosition...3 3 N
+commands...MLRMMLRLWLM
+newPosition...5 5 S
+currentPosition...3 3 N
+commands...M
+newPosition...4 4 N
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
