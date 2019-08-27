@@ -30,6 +30,7 @@ pipeline {
                     docker build -t "marsrover" -f .infra/docker/Dockerfile .
                 '''
             }
+            
         }
         stage('Publishing to Dockerhub') {
             steps {
